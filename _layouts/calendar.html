@@ -62,7 +62,7 @@ calendar_bootstrap_css: <link rel="stylesheet" href="!PATH_TO_COMPONENTS!/bootst
   // Format the events json to be compatible with Bootstrap-Calendar format
   function parseEvents(rows) {
     rows.shift(); // remove header
-    var inputDateFormat = "M/D/YYYY H:mm A Z"; // timezone will be added below
+    var inputDateFormat = '{{ page.event_date_format }}'; // timezone will be added below
     var result = [];
 
     _.forEach(rows, function(columns, index) {
